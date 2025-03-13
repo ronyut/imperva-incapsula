@@ -3,11 +3,13 @@
 This repository is intended to clarify the purpose of the JavaScript file `kramericaindustries.ac.lib.js`, which can be found on various websites, particularly in Israel. If you've encountered this file and are concerned about its legitimacy, this document will help you understand its origin and function.
 
 ## What Is This File?
-`kramericaindustries.ac.lib.js` is part of Imperva Incapsula, a widely used cloud security and content delivery network (CDN) service. Imperva Incapsula provides:
-* Web Application Firewall (WAF) to protect against attacks like SQL injection and XSS.
-* DDoS Protection to mitigate volumetric and application-layer attacks.
-* Bot Mitigation to differentiate between good and malicious bots.
-* Content Delivery Network (CDN) to optimize website performance and load times.
+`kramericaindustries.ac.lib.js` is part of Imperva Incapsula, a widely used cloud security and content delivery network (CDN) service.  
+This index file on the website will usually look like this:  
+```
+<!DOCTYPE html><html><head><meta charset="utf-8"><script type="text/javascript" src="/kramericaindustries.ac.lib.js"></script><script type="text/javascript">
+;;window.rbzns={"bereshit":"1","seed":"<long-seed-goes-here>","location_host":"<host-name-goes-here>","storage":3,"protocol":"https:"};winsocks();</script></head><body></body></html>
+```
+Also, the main directory on you website will probably have a file/dir named `7060ac19f50208cbb6b45328ef94140a612ee92387e015594234077b4d1e64f1` which is also part of Incapsula, to which Incapsula sends requests.
  
 ## Why Does It Look Suspicious?
 Several factors may raise concerns for security researchers:
@@ -18,8 +20,7 @@ Several factors may raise concerns for security researchers:
 
 ## Is This File Malicious?
 No. Despite its misleading name and obfuscation, this file is not malware. It is part of Imperva Incapsula’s client-side integration and is used for:
-
-## User behavior analysis for bot detection
+* User behavior analysis for bot detection
 * Security monitoring and enforcement
 * Performance optimizations
 
